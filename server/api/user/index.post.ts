@@ -12,5 +12,6 @@ export default defineEventHandler(async(event: CompatibilityEvent) => {
   } else {
     event.res.statusCode = bodyValidation.statusCode
     event.res.statusMessage = bodyValidation.statusMessage
+    event.res.end();
   }
 });
