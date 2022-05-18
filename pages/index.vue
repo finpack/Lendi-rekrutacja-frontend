@@ -1,14 +1,17 @@
 <template>
-  <div>
-    <h1>{{ title }}:</h1>
-    <p>
-      1. Utworzyć strone podstrone plik lista.vue w folderze pages który
-      wygeneruje urla "/lista"
-    </p>
-    2.
-  </div>
+  <v-row>
+    <v-col>
+      <h1>{{ title }}</h1>
+      <p v-for="(task, index) in tasks">{{index + 1}}. <span v-html="task"></span></p>
+    </v-col>
+  </v-row>
 </template>
 
 <script lang="ts" setup>
-const title: string = 'Lendi zadanie rekrutacyjne';
+const title: string = 'Lendi zadanie rekrutacyjne:';
+
+const tasks: string[] = [
+    'Utworzyć podstrone <a href="https://nuxtjs.org/docs/features/file-system-routing/">"/lista"<a/>',
+    ''
+]
 </script>
