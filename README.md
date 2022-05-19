@@ -1,6 +1,7 @@
 # Lendi zadanie rekrutacyjne - Vue
 
-Opis zadania znajduje sie na stronie głównej po odpaleniu aplikacji (`/pages/index.html`)
+Zadanie polega na utworzeniu prostego panelu typu CRUD do zarządzania użytkownikami.
+Szczegółowy opis zadania znajduje sie na stronie głównej i wyświetla się po odpaleniu aplikacji (`/pages/index.html`)
 
 ## Instalacja
 
