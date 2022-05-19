@@ -1,20 +1,18 @@
 # Lendi zadanie rekrutacyjne - Vue
 
-## Setup
+Opis zadania znajduje sie na stronie głównej po odpaleniu aplikacji (`/pages/index.html`)
 
-Make sure to install the dependencies:
+## Instalacja
+
+Aby zainstalować paczki npm-owe należy użyć poniższej komendy.
 
 ```bash
-# yarn
-yarn install
-
-# npm
 npm install
 ```
 
-## Development Server
+## Hostowanie aplikacji lokalnie
 
-Start the development server on http://localhost:3000
+Serwer hostujący aplikację oraz serwer z api wystartuje pod `http://localhost:3000` po wykonaniu poniższej komendy.
 
 ```bash
 npm run dev
