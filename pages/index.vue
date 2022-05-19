@@ -25,24 +25,37 @@
   <v-row>
     <v-col>
       <h1>Zadania:</h1>
-      <p v-for="(task, index) in tasks">
-        {{index + 1}}. <span v-html="task"></span>
-      </p>
+      <ol class="ml-4">
+        <li><p>Utworzyć podstronę <a href="https://nuxtjs.org/docs/features/file-system-routing/">"/uzytkownicy"</a>.</p></li>
+        <li><p>Na podstronie '/uzytkownicy' wyświetlić listę wszystkich użytkowników, których można pobrać za pomocą API.</p></li>
+        <li><p>Zaimplementować funkcjonalności dodawania, edycji oraz usuwania użytkownika (CRUD) poprzez API.</p></li>
+      </ol>
     </v-col>
   </v-row>
   <v-row>
     <v-col>
       <h1>Wymagania:</h1>
-      <p v-for="(requirement, index) in requirements">
-        {{index + 1}}. <span v-html="requirement"></span>
-      </p>
+      <ol class="ml-4">
+        <li><p>Formularz dodawania oraz edycji użytkownika powinien posiadać mechanizm walidacji.</p></li>
+        <li><p>Aplikacja powinna obsługiwać wyjątki (obsługa błędów z serwera, np. brak walidacji).</p></li>
+        <li><p>Aplikacja powinna być <a href="https://next.vuetifyjs.com/en/features/display-and-platform/">responsywna</a>.</p></li>
+      </ol>
     </v-col>
   </v-row>
   <v-row>
     <v-col>
       <h1>Dokumentacja API:</h1>
-      <p v-for="(apiCall, index) in apiCalls" class="mb-2">
-        <span v-html="apiCall"/>
+      <p class="d-inline">
+        <code>GET /api/users</code> - Zwraca listę wszystkich obiektów typu User
+      </p>
+      <p>
+        <code>POST /api/users</code> - Przyjmuje w body obiekt User i następnie po poprawnej walidacji dodaje go do bazy
+      </p>
+      <p>
+        <code>PUT /api/users/{user_id}</code> - Przyjmuje w body obiekt User oraz parametr userId i następnie po poprawnej walidacji edytuje usera i danym id
+      </p>
+      <p>
+        <code>DELETE /api/users/{user_id}</code> - Usuwa użytkownika o danym id
       </p>
     </v-col>
   </v-row>
@@ -64,22 +77,4 @@ type User = {
 </template>
 
 <script lang="ts" setup>
-const tasks: string[] = [
-    'Utworzyć podstronę <a href="https://nuxtjs.org/docs/features/file-system-routing/">"/uzytkownicy"<a/>.',
-    `Na podstronie '/uzytkownicy' wyświetlić listę wszystkich użytkowników, których można pobrać za pomocą API.`,
-    'Zaimplementować funkcjonalności dodawania, edycji oraz usuwania użytkownika (CRUD) poprzez API.',
-]
-
-const requirements: string[] = [
-  'Formularz dodawania oraz edycji użytkownika powinien posiadać mechanizm walidacji.',
-  'Aplikacja powinna obsługiwać wyjątki (obsługa błędów z serwera, np. brak walidacji).',
-  'Aplikacja powinna być <a href="https://next.vuetifyjs.com/en/features/display-and-platform/">responsywna</a>.',
-]
-
-const apiCalls: string[] = [
-    '<pre>GET /api/users</pre> Zwraca listę wszystkich obiektów typu User',
-    '<pre>POST /api/users</pre> Przyjmuje w body obiekt User i następnie po poprawnej walidacji dodaje go do bazy',
-    '<pre>PUT /api/users/{user_id}</pre> Przyjmuje w body obiekt User oraz parametr userId i następnie po poprawnej walidacji edytuje usera i danym id',
-    '<pre>DELETE /api/users/{user_id}</pre> Usuwa użytkownika o danym id',
-]
 </script>
