@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [
       vuetify(),
+      // @ts-ignore
       {
         // https://github.com/nuxt/framework/issues/2798
         // Poniższy kod zmienia kolejność ładowanych pluginów, tak by plugin vuetify ładował sie po pluginie do vue
